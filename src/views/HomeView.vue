@@ -15,7 +15,7 @@
         <div class="col-12 mt-3">
           <button class="btn btn-primary"
                   @click="toggleSidebar()">
-            {{ isSidebarActive ? 'Open sidebar' : 'Close sidebar' }}
+            {{ isSidebarActive ? 'Close sidebar' : 'Open sidebar' }}
           </button>
         </div>
       </div>
