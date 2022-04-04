@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $space-2;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: $space-1;
+}
+
+// SCROLLBAR
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-surface-1dp $color-surface-outline;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $color-surface-1dp;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $color-surface-outline;
+  border-radius: 20px;
+}
