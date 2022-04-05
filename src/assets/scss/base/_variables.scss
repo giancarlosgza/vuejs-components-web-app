@@ -28,3 +28,8 @@ $border-radius-12: 12px;
 
 $transition-sidebar: .2s ease-in-out;
 $transition-cubic-bezier: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+@media (prefers-color-scheme: dark) {
+  $bg-body: #121212;
+  $color-on-body: #ffffff;
+}

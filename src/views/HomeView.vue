@@ -8,6 +8,7 @@
         <div class="col-12">
           <h1>Sidebar tutorial</h1>
           <a href="https://blog.colorffy.com/posts/how-to-create-an-animated-sidebar-with-vue-3"
+             class="text-link"
              target="_blank" rel="noopener">
             From: https://blog.colorffy.com/posts/how-to-create-an-animated-sidebar-with-vue-3
           </a>
@@ -15,6 +16,9 @@
         <div class="col-12 mt-3">
           <button class="btn btn-primary"
                   @click="toggleSidebar()">
+            <i class="material-icons-outlined">
+              {{ isSidebarActive ? 'close' : 'menu_open' }}
+            </i>
             {{ isSidebarActive ? 'Close sidebar' : 'Open sidebar' }}
           </button>
         </div>
@@ -25,8 +29,8 @@
 
 <script>
 // @ is an alias to /src
-import TheSidebar from "@/assets/TheSidebar";
-import TheNavbar from "@/assets/TheNavbar";
+import TheSidebar from "@/components/TheSidebar";
+import TheNavbar from "@/components/TheNavbar";
 
 export default {
   name: "HomeView",
