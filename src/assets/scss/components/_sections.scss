@@ -1,0 +1,10 @@
+.section {
+  padding: $space-3;
+
+  &.section-hero {
+    background-color: $color-primary;
+    padding: calc($space-3 * 2);
+  }
+}
+
+

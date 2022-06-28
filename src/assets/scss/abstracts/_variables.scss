@@ -18,6 +18,10 @@ $color-surface-1dp: #ffffff;
 
 $font-dm-sans: "DM Sans", sans-serif;
 
+$fs-1: 2.5rem;
+$fs-2: 2rem;
+$fs-3: 1.5rem;
+
 $space-1: 1rem;
 $space-2: 2rem;
 $space-3: 3rem;
@@ -26,8 +30,17 @@ $border-radius-6: 6px;
 $border-radius-8: 8px;
 $border-radius-12: 12px;
 
+$shadow-0dp: none;
+$shadow-sm: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+$shadow-md: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0px 1px 30px 5px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0px 5px 50px 10px rgba(0, 0, 0, 0.1);
+
 $transition-sidebar: .2s ease-in-out;
 $transition-cubic-bezier: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+$gutter-x: 1.5rem;
+$gutter-y: 0;
 
 @media (prefers-color-scheme: dark) {
   $bg-body: #121212;

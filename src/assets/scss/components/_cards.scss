@@ -1,0 +1,15 @@
+@use "sass:math";
+
+.card {
+  box-shadow: $shadow-md;
+  border-radius: $border-radius-12;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+
+  .card-body {
+    padding: math.div($space-1, 1);
+    width: 100%;
+  }
+}

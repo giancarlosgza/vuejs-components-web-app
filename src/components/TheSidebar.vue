@@ -29,6 +29,12 @@
                 Cards
               </router-link>
             </li>
+            <li class="sidebar-item">
+              <router-link to="/gsap">
+                <i class="material-icons-outlined">code</i>
+                GSAP
+              </router-link>
+            </li>
             <li class="sidebar-item disabled">
               <router-link to="/" :disabled="isDisabled">
                 <i class="material-icons-outlined">code</i>
