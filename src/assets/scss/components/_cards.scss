@@ -7,6 +7,7 @@
   flex-direction: row;
   width: 100%;
   height: auto;
+  background-color: var(--theme-color-white);
 
   .card-body {
     padding: math.div($space-1, 1);
