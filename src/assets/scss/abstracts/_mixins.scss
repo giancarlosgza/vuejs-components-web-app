@@ -2,6 +2,31 @@
 @use "sass:map";
 @use "variables" as v;
 
+@mixin btn-body() {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-weight: 700;
+  font-size: calc(1rem + 0.2vw);
+  border-style: none;
+  border-radius: 12px;
+  background-color: v.$color-white;
+  font-family: v.$font-dm-sans;
+  transition: v.$transition-cubic-bezier;
+}
+
+@mixin btn-filled($color, $bg) {
+  background: $bg;
+  color: $color;
+
+  &:hover {
+    background: scale-color($bg, $alpha: -30%);
+  }
+
+  &:active {
+    background: scale-color($bg, $alpha: -50%);
+  }
+}
+
 @mixin text-color($color) {
   color: $color !important;
 }

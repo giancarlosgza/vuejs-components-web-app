@@ -1,12 +1,7 @@
-.btn {
-  padding: 8px;
-  margin: 4px;
-  background-color: $color-white;
-  border-radius: $border-radius-6;
-  font-family: $font-dm-sans;
-  font-weight: 500;
-  transition: $transition-cubic-bezier;
+@use "../abstracts/mixins" as m;
 
+.btn {
+  @include m.btn-body;
 
   &.btn-sm {
     padding: 4px;
@@ -18,22 +13,19 @@
   }
 
   &.btn-primary {
-    border: 3px solid $color-on-body;
-    background-color: $color-primary;
-    padding: 10px 30px;
+    @include m.btn-filled($color-primary, $color-on-body);
+  }
 
-    &:hover {
-      background-color: $color-primary-dark;
-      border-radius: $border-radius-12;
-    }
+  &.btn-secondary {
+    @include m.btn-filled($color-secondary, $color-primary);
+  }
+
+  &.btn-accent {
+    @include m.btn-filled($color-dark, $color-white);
   }
 
   &.btn-link {
-    border: none;
-    background-color: $color-transparent;
-
-    &:hover {
-      background-color: scale-color($color-primary, $alpha: -90%) !important;
-    }
+    @include m.btn-filled($color-primary, $color-transparent);
+    text-decoration: underline;
   }
 }

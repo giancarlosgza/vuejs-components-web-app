@@ -35,6 +35,12 @@
                 GSAP
               </router-link>
             </li>
+            <li class="sidebar-item">
+              <router-link to="/typography">
+                <i class="material-icons-outlined">code</i>
+                Typography
+              </router-link>
+            </li>
             <li class="sidebar-item disabled">
               <router-link to="/" :disabled="isDisabled">
                 <i class="material-icons-outlined">code</i>

@@ -1,3 +1,5 @@
+@layer typography, section, colors;
+
 @import "abstracts/variables";
 @import "abstracts/color-bg";
 @import "abstracts/functions";
@@ -8,6 +10,7 @@
 
 @import "components/buttons";
 @import "components/cards";
+@import "components/icons";
 @import "components/images";
 @import "components/sidebar";
 @import "components/sections";

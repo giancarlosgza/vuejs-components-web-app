@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import GsapAnimations from "@/views/GsapAnimations";
+import TypographyView from "@/views/TypographyView";
 
 const routes = [
     {
@@ -10,8 +11,13 @@ const routes = [
     },
     {
         path: "/gsap",
-        name: "GsapAnimations",
+        name: "gsap",
         component: GsapAnimations,
+    },
+    {
+        path: "/typography",
+        name: "typography",
+        component: TypographyView,
     }
 ];
 

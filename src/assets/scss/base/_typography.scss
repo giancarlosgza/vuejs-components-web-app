@@ -9,62 +9,67 @@ body {
   font-family: $font-dm-sans;
 }
 
-h1 {
-  font-size: $fs-1;
-  font-weight: 700;
-  margin-bottom: $space-1;
-}
+@layer typography {
+  h1 {
+    font-size: clamp(var(--fs-1));
+    font-weight: 700;
+    margin-bottom: $space-1;
+  }
 
-h2 {
-  font-size: $fs-2;
-  margin-bottom: $space-1;
-}
+  h2 {
+    font-size: clamp(var(--fs-2));
+    margin-bottom: $space-1;
+  }
 
-h3 {
-  font-size: $fs-3;
-  font-weight: 400;
-  color: $color-muted;
-}
+  h3 {
+    font-size: clamp(var(--fs-3));
+    font-weight: 400;
+    color: $color-muted;
+  }
 
-.material-icons-outlined {
-  display: inline-flex;
-  vertical-align: middle;
-}
+  h4 {
+    font-size: clamp(var(--fs-4));
+    font-weight: 400;
+  }
 
-.material-symbols-rounded {
-  font-variation-settings: 'FILL' 0,
-  'wght' 500,
-  'GRAD' 200,
-  'opsz' 48
-}
+  h5 {
+    font-size: clamp(var(--fs-5));
+    font-weight: 400;
+  }
 
-a {
-  color: $color-secondary;
+  h6 {
+    font-size: clamp(var(--fs-6));
+    font-weight: 400;
+  }
 
-  &.text-link {
-    text-underline: none;
-    text-decoration: none;
+  a {
+    color: $color-secondary;
 
-    &:hover {
-      box-shadow: inset 0 -3px 0 $color-secondary;
-    }
+    &.text-link {
+      text-underline: none;
+      text-decoration: none;
 
-    &:after {
-      content: 'arrow_forward';
-      font-family: 'Material Icons Outlined', sans-serif;
-      font-size: 20px;
-      vertical-align: middle;
-      margin-left: .5rem;
+      &:hover {
+        box-shadow: inset 0 -3px 0 $color-secondary;
+      }
+
+      &:after {
+        content: 'arrow_forward';
+        font-family: 'Material Icons Outlined', sans-serif;
+        font-size: 20px;
+        vertical-align: middle;
+        margin-left: .5rem;
+      }
     }
   }
 }
 
 .fs-1 {
-  font-size: $fs-1;
+  font-size: clamp(var(--fs-1));
 }
 
 .text-hero {
-  font-size: calc($fs-1 * 2);
+  font-size: calc(var(--fs-1) * 2);
   line-height: 1;
   letter-spacing: -0.05em;
 
@@ -73,8 +78,18 @@ a {
   }
 }
 
-.text-muted {
-  color: $color-muted;
+@layer colors {
+  .text-primary {
+    color: $color-primary;
+  }
+
+  .text-secondary {
+    color: $color-secondary;
+  }
+
+  .text-muted {
+    color: $color-muted;
+  }
 }
 
 .text-center {
@@ -109,14 +124,6 @@ a {
   &.gold {
     @include m.text-gradient(45deg, #d6c79a, #edd9a1);
   }
-}
-
-.icon-wrap {
-  background-color: scale-color($color-primary, $alpha: -50%);
-  border-radius: $border-radius-12;
-  padding: $space-1;
-  margin-bottom: math.div($space-1, 0.8);
-  @extend .mdc-38;
 }
 
 .mdc-38 {
