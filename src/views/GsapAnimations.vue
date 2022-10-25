@@ -1,18 +1,23 @@
 <template>
   <div>
     <DefaultLayout :sidebar-prop="isSidebarActive">
-      <div class="section">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 text-center">
-              <h1 class="text-hero text-gradient green">GSAP ANIMATIONS</h1>
-              <button class="btn btn-primary mt-3" @click="toggleSidebar()">
-                <i class="material-icons-outlined">
-                  {{ isSidebarActive ? "close" : "menu_open" }}
-                </i>
-                {{ isSidebarActive ? "Close sidebar" : "Open sidebar" }}
-              </button>
+
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-12">
+            <div class="card header-hero header-buttons">
+              <div class="card-body">
+                <h1>GSAP</h1>
+                <p class="subtitle-1">Motion animations using GSAP.</p>
+              </div>
             </div>
+            <button class="btn-fab btn-secondary"
+                    @click="toggleSidebar()">
+              <i class="material-icons-outlined me-1">
+                {{ isSidebarActive ? 'close' : 'menu_open' }}
+              </i>
+              {{ isSidebarActive ? 'Close sidebar' : 'Open sidebar' }}
+            </button>
           </div>
         </div>
       </div>
@@ -22,10 +27,10 @@
           <div class="row">
             <div class="col-6">
               <i class="material-symbols-rounded icon-wrap mdc-38">&#xe8b6;</i>
-              <h2 class="fs-1 text-gradient green">
+              <h2 class="text-gradient green">
                 The smartest and fastest Pixel yet.
               </h2>
-              <h3>
+              <h3 class="title">
                 macOS and M2 work together to bring more speed and responsiveness
                 to all your go‑to apps — including Microsoft 365 and your favorite
                 iOS apps. Over 10,000 apps and plug‑ins are already optimized for
@@ -50,18 +55,18 @@
           <div class="row">
             <div class="col-6">
               <i class="material-symbols-rounded icon-wrap mdc-38">&#xf042;</i>
-              <h2 class="fs-1">
+              <h2>
                 Google Tensor: Our first custom-built processor.
               </h2>
-              <h3>
+              <h3 class="title text-muted">
                 Bring your photos, movies, music, and documents with you — and
                 open them in a flash.
               </h3>
             </div>
             <div class="col-6">
               <i class="material-symbols-rounded icon-wrap mdc-38">&#xef76;</i>
-              <h2 class="fs-1">The most advanced smartphone camera.</h2>
-              <h3>
+              <h2>The most advanced smartphone camera.</h2>
+              <h3 class="title text-muted">
                 Faster memory. And more of it. M2 has 100GB per second of memory
                 bandwidth — 50 percent more than M1. And it supports 24GB of
                 unified memory for superfluid multitasking and working with
@@ -85,10 +90,10 @@
             </div>
             <div class="col-6">
               <i class="material-symbols-rounded icon-wrap">&#xe145;</i>
-              <h2 class="fs-1 text-gradient blue">
+              <h2 class="text-gradient orange">
                 Redesigned for powerful performance.
               </h2>
-              <h3>
+              <h3 class="title text-muted">
                 The high-performance media engine on M2 supports ProRes encode and
                 decode. So you can play and edit up to 11 streams of 4K ProRes
                 video and up to 2 streams of 8K ProRes video — including 4K ProRes
@@ -120,7 +125,7 @@
               <div class="card">
                 <div class="card-body text-center">
                   <i class="material-symbols-rounded icon-wrap">&#xe71c;</i>
-                  <h3>GSAP</h3>
+                  <h3 class="title">GSAP</h3>
                 </div>
               </div>
             </div>
@@ -128,7 +133,7 @@
               <div class="card">
                 <div class="card-body text-center">
                   <i class="material-symbols-rounded icon-wrap">&#xe422;</i>
-                  <h3>GSAP CSS</h3>
+                  <h3 class="title">GSAP CSS</h3>
                 </div>
               </div>
             </div>
@@ -136,7 +141,7 @@
               <div class="card">
                 <div class="card-body text-center">
                   <i class="material-symbols-rounded icon-wrap">&#xe155;</i>
-                  <h3>GSAP JS</h3>
+                  <h3 class="title">GSAP JS</h3>
                 </div>
               </div>
             </div>
@@ -148,7 +153,7 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-6 text-center">
-              <h2 class="fs-1">Grab-and-go accessories.</h2>
+              <h2>Grab-and-go accessories.</h2>
               <img
                   src="@/assets/img/laptop.jpg"
                   loading="lazy"
@@ -158,7 +163,7 @@
                   alt="Laptop image"
               />
               <p class="mt-3">
-                <a href="#" class="text-link">Shop all Pixel 6 Pro accessories</a>
+                <a href="#" class="btn btn-accent">Shop all Pixel 6 Pro accessories</a>
               </p>
             </div>
           </div>

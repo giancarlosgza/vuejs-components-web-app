@@ -1,7 +1,7 @@
-@use "variables" as v;
+@use "variables" as *;
 @use "functions" as f;
 
-@each $color, $value in v.$theme-colors {
+@each $color, $value in $theme-colors {
   $color-rgb: f.to-rgb($value);
 
   .bg-#{$color} {

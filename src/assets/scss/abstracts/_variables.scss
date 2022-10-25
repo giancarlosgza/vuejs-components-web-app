@@ -1,23 +1,23 @@
 $bg-body: #ffffff;
 $color-on-body: #000000;
-$color-border: #dadce0;
-
-$bg-sidebar: #ffffff;
-$color-on-sidebar: #121212;
-
 $color-muted: #52595f;
+
 $color-primary: #15DC9B;
-$color-primary-dark: #0cc285;
+$color-primary-dark: scale-color($color-primary, $lightness: -80%);
 $color-secondary: #25272b;
 $color-accent: #0063cd;
 $color-accent-dark: #001787;
 $color-transparent: transparent;
 
+$color-on-primary: #000000;
+$color-on-primary-inverse: #ffffff;
+
 $color-dark: #121212;
 $color-white: #ffffff;
 
+// CARDS
+$color-surface-1: #ffffff;
 $color-surface-outline: #dadce0;
-$color-surface-1dp: #ffffff;
 
 $theme-colors: (
         'color-white': #ffffff,
@@ -47,9 +47,12 @@ $space-1: 1rem;
 $space-2: 2rem;
 $space-3: 3rem;
 
+$border-radius-4: 4px;
 $border-radius-6: 6px;
-$border-radius-8: 8px;
-$border-radius-12: 12px;
+$border-radius-8: ($border-radius-4 * 2);
+$border-radius-12: ($border-radius-6 * 2);
+$border-radius-25: 25px;
+$border-radius-50: ($border-radius-25 * 2);
 
 $shadow-0dp: none;
 $shadow-sm: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
@@ -73,32 +76,52 @@ $breakpoints: (
         320: 320px,
 );
 
-@media (prefers-color-scheme: dark) {
-  $bg-body: #121212;
-  $color-on-body: #ffffff;
-  $color-muted: scale-color($color-muted, $lightness: 60%);
-  $color-primary: scale-color($color-primary, $lightness: 60%);
-  $color-secondary: scale-color($color-secondary, $lightness: 60%);
+// Type scale
+$ds-headline1: (
+        font-family: ("DM Sans", sans-serif),
+        font-weight: 700,
+        font-size: clamp(var(--fs-1)),
+        letter-spacing: -1.5px,
+);
 
-  body {
-    background-color: $bg-body;
-    color: $color-on-body;
-  }
+$ds-headline2: (
+        font-family: ("DM Sans", sans-serif),
+        font-weight: 500,
+        font-size: clamp(var(--fs-2)),
+        letter-spacing: -0.5px,
+);
 
-  h3 {
-    color: $color-muted;
-  }
+$ds-headline3: (
+        font-family: ("DM Sans", sans-serif),
+        font-weight: 400,
+        font-size: clamp(var(--fs-3)),
+        letter-spacing: 0px,
+);
 
-  .text-primary {
-    color: $color-primary;
-  }
+$ds-headline4: (
+        font-family: ("DM Sans", sans-serif),
+        font-weight: 400,
+        font-size: clamp(var(--fs-4)),
+        letter-spacing: 0.25px,
+);
 
-  .text-secondary {
-    color: $color-secondary;
-  }
+$ds-headline5: (
+        font-family: ("DM Sans", sans-serif),
+        font-weight: 400,
+        font-size: clamp(var(--fs-5)),
+        letter-spacing: 0px,
+);
 
-  .text-muted {
-    color: $color-muted;
-  }
+$ds-headline6: (
+        font-family: ("DM Sans", sans-serif),
+        font-weight: 400,
+        font-size: clamp(var(--fs-6)),
+        letter-spacing: 0.15px,
+);
 
-}
+$ds-subtitle1: (
+        font-family: ("DM Sans", sans-serif),
+        font-weight: 400,
+        font-size: 15px,
+        letter-spacing: 0.15px,
+);

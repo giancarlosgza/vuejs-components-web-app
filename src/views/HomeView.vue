@@ -1,31 +1,42 @@
 <template>
   <div>
     <DefaultLayout :sidebar-prop="isSidebarActive">
-      <div class="container">
+
+      <div class="container mt-3">
         <div class="row">
           <div class="col-12">
-            <h1>Sidebar tutorial</h1>
+            <div class="card header-hero header-sidebar">
+              <div class="card-body">
+                <h1>Sidebar</h1>
+                <p>Sidebar contains navigation content from the website or app</p>
+              </div>
+            </div>
+            <button class="btn-fab btn-secondary"
+                    @click="toggleSidebar()">
+              <i class="material-icons-outlined me-1">
+                {{ isSidebarActive ? 'close' : 'menu_open' }}
+              </i>
+              {{ isSidebarActive ? 'Close sidebar' : 'Open sidebar' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-3">
+
+          </div>
+          <div class="col-12 mb-3">
             <a href="https://blog.colorffy.com/posts/how-to-create-an-animated-sidebar-with-vue-3"
                class="text-link"
                target="_blank" rel="noopener">
               From: https://blog.colorffy.com/posts/how-to-create-an-animated-sidebar-with-vue-3
             </a>
           </div>
-          <div class="col-12 mt-3">
-            <button class="btn btn-primary"
-                    @click="toggleSidebar()">
-              <i class="material-icons-outlined">
-                {{ isSidebarActive ? 'close' : 'menu_open' }}
-              </i>
-              {{ isSidebarActive ? 'Close sidebar' : 'Open sidebar' }}
-            </button>
-
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-accent">Accent</button>
-          </div>
         </div>
       </div>
+
     </DefaultLayout>
   </div>
 </template>

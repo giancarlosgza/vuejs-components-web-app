@@ -1,16 +1,39 @@
 @use "sass:math";
+@use "../abstracts/variables" as *;
 
 .card {
   box-shadow: $shadow-md;
-  border-radius: $border-radius-12;
+  border-radius: $border-radius-25;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
-  background-color: var(--theme-color-white);
+  background-color: $color-surface-1;
+  margin-bottom: $space-1;
+  transition: $transition-cubic-bezier;
 
   .card-body {
-    padding: math.div($space-1, 1);
+    padding: math.div($space-1, .8);
     width: 100%;
   }
+
+  &:is(.header-hero) {
+    padding: $space-3;
+
+    &:is(.header-sidebar) {
+      background-color: #36a9e2;
+      background-image: radial-gradient(at 76% 12%, hsl(155, 94%, 35%) 0px, transparent 50%), radial-gradient(at 27% 95%, hsl(19, 97%, 76%) 0px, transparent 50%), radial-gradient(at 82% 87%, hsl(133, 97%, 62%) 0px, transparent 50%), radial-gradient(at 71% 14%, hsl(219, 77%, 48%) 0px, transparent 50%), radial-gradient(at 75% 99%, hsl(27, 91%, 59%) 0px, transparent 50%), radial-gradient(at 18% 55%, hsl(88, 73%, 37%) 0px, transparent 50%);
+    }
+
+    &:is(.header-buttons) {
+      background-color: #747deb;
+      background-image: radial-gradient(at 37% 3%, hsl(234, 23%, 48%) 0px, transparent 50%), radial-gradient(at 64% 77%, hsl(213, 94%, 56%) 0px, transparent 50%), radial-gradient(at 74% 82%, hsl(233, 46%, 50%) 0px, transparent 50%), radial-gradient(at 36% 97%, hsl(232, 76%, 86%) 0px, transparent 50%), radial-gradient(at 15% 37%, hsl(189, 92%, 37%) 0px, transparent 50%), radial-gradient(at 89% 3%, hsl(121, 72%, 65%) 0px, transparent 50%);
+    }
+
+    &:is(.header-typography) {
+      background-color: #a26f1f;
+      background-image: radial-gradient(at 45% 22%, hsl(352, 74%, 78%) 0px, transparent 50%), radial-gradient(at 52% 100%, hsl(350, 98%, 64%) 0px, transparent 50%), radial-gradient(at 75% 27%, hsl(98, 62%, 73%) 0px, transparent 50%), radial-gradient(at 64% 11%, hsl(301, 22%, 24%) 0px, transparent 50%), radial-gradient(at 64% 10%, hsl(76, 83%, 64%) 0px, transparent 50%), radial-gradient(at 97% 66%, hsl(345, 93%, 59%) 0px, transparent 50%)
+    }
+  }
 }
+

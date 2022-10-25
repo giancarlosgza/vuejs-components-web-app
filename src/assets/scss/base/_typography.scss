@@ -1,71 +1,95 @@
 @use "sass:math";
+@use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as m;
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 body {
   font-family: $font-dm-sans;
 }
 
-@layer typography {
-  h1 {
-    font-size: clamp(var(--fs-1));
-    font-weight: 700;
-    margin-bottom: $space-1;
-  }
+h1 {
+  font-family: map-get($ds-headline1, font-family);
+  font-weight: map-get($ds-headline1, font-weight);
+  font-size: map-get($ds-headline1, font-size);
+  letter-spacing: map-get($ds-headline1, letter-spacing);
+}
 
-  h2 {
-    font-size: clamp(var(--fs-2));
-    margin-bottom: $space-1;
-  }
+h2 {
+  font-family: map-get($ds-headline2, font-family);
+  font-weight: map-get($ds-headline2, font-weight);
+  font-size: map-get($ds-headline2, font-size);
+  letter-spacing: map-get($ds-headline2, letter-spacing);
+}
 
-  h3 {
-    font-size: clamp(var(--fs-3));
-    font-weight: 400;
-    color: $color-muted;
-  }
+h3 {
+  font-family: map-get($ds-headline3, font-family);
+  font-weight: map-get($ds-headline3, font-weight);
+  font-size: map-get($ds-headline3, font-size);
+  letter-spacing: map-get($ds-headline3, letter-spacing);
+}
 
-  h4 {
-    font-size: clamp(var(--fs-4));
-    font-weight: 400;
-  }
+h4 {
+  font-family: map-get($ds-headline4, font-family);
+  font-weight: map-get($ds-headline4, font-weight);
+  font-size: map-get($ds-headline4, font-size);
+  letter-spacing: map-get($ds-headline4, letter-spacing);
+}
 
-  h5 {
-    font-size: clamp(var(--fs-5));
-    font-weight: 400;
-  }
+h5 {
+  font-family: map-get($ds-headline5, font-family);
+  font-weight: map-get($ds-headline5, font-weight);
+  font-size: map-get($ds-headline5, font-size);
+  letter-spacing: map-get($ds-headline5, letter-spacing);
+}
 
-  h6 {
-    font-size: clamp(var(--fs-6));
-    font-weight: 400;
-  }
+h6 {
+  font-family: map-get($ds-headline6, font-family);
+  font-weight: map-get($ds-headline6, font-weight);
+  font-size: map-get($ds-headline6, font-size);
+  letter-spacing: map-get($ds-headline6, letter-spacing);
+}
 
-  a {
-    color: $color-secondary;
+p,
+a {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  line-height: 20px;
+}
 
-    &.text-link {
-      text-underline: none;
-      text-decoration: none;
+a {
+  color: $color-secondary;
 
-      &:hover {
-        box-shadow: inset 0 -3px 0 $color-secondary;
-      }
+  &.text-link {
+    text-underline: none;
+    text-decoration: none;
 
-      &:after {
-        content: 'arrow_forward';
-        font-family: 'Material Icons Outlined', sans-serif;
-        font-size: 20px;
-        vertical-align: middle;
-        margin-left: .5rem;
-      }
+    &:hover {
+      box-shadow: inset 0 -3px 0 $color-secondary;
+    }
+
+    &:after {
+      content: 'arrow_forward';
+      font-family: 'Material Icons Outlined', sans-serif;
+      font-size: 20px;
+      vertical-align: middle;
+      margin-left: .5rem;
     }
   }
 }
 
 .fs-1 {
   font-size: clamp(var(--fs-1));
+}
+
+.title {
+  font-size: 28px;
+}
+
+.subtitle-1 {
+  font-family: map-get($ds-subtitle1, font-family);
+  font-weight: map-get($ds-subtitle1, font-weight);
+  font-size: map-get($ds-subtitle1, font-size);
+  letter-spacing: map-get($ds-subtitle1, letter-spacing);
 }
 
 .text-hero {
@@ -78,7 +102,7 @@ body {
   }
 }
 
-@layer colors {
+@layer brand-colors {
   .text-primary {
     color: $color-primary;
   }

@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "../abstracts/variables" as *;
 
 .sidebar {
   position: fixed;
@@ -9,9 +10,9 @@
   visibility: visible;
   width: calc(#{$space-3} * 6);
   height: 100%;
-  background-color: $bg-sidebar;
-  color: $color-on-sidebar;
-  border-right: 3px solid $color-border;
+  background-color: $color-surface-1;
+  color: $color-dark;
+  border-right: 3px solid $color-surface-outline;
   transition: $transition-sidebar;
   z-index: 99;
   padding: 20px;
@@ -37,7 +38,7 @@
       flex-wrap: wrap;
       word-break: break-all;
       align-items: center;
-      border-bottom: 1px solid $color-border;
+      border-bottom: 1px solid $color-surface-outline;
 
       p {
         font-weight: 700;
@@ -52,33 +53,46 @@
       flex: 1;
 
       .sidebar-item {
-        color: $color-muted;
-        border: 1px solid transparent;
-        border-radius: $border-radius-8;
-        transition: $transition-cubic-bezier;
-        padding: .5rem;
+        display: flex;
         margin-bottom: .5rem;
 
+        .sidebar-link {
+          font-size: 14px;
+          border: 1px solid transparent;
+          border-radius: $border-radius-12;
+          transition: $transition-cubic-bezier;
+          padding: .8rem .5rem;
+          width: 100%;
+
+          &:hover {
+            background-color: scale-color($color-primary, $alpha: -90%) !important;
+            font-weight: 500;
+            cursor: pointer;
+          }
+
+          &.disabled {
+            background-color: scale-color($color-muted, $alpha: -50%);
+            opacity: 0.5;
+
+            a {
+              color: $color-muted;
+            }
+          }
+
+          &.router-link-active, &.router-link-exact-active {
+            background-color: scale-color($color-primary, $alpha: -80%);
+            color: $color-primary !important;
+            font-weight: 700;
+          }
+        }
+
         a {
+          color: $color-muted;
           text-decoration: none;
           background-color: transparent;
 
           i {
             margin-right: math.div($space-1, 3);
-          }
-        }
-
-        &:hover {
-          background-color: scale-color($color-primary, $alpha: -90%) !important;
-          font-weight: 700;
-        }
-
-        &.disabled {
-          background-color: scale-color($color-muted, $alpha: -85%);
-          opacity: 0.5;
-
-          a {
-            color: $color-muted;
           }
         }
       }

@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as m;
 
 .btn {
@@ -12,20 +13,38 @@
     }
   }
 
+  &.btn-icon {
+    padding: 0.75rem 1rem;
+    border-radius: $border-radius-50;
+
+    i {
+      font-size: 18px;
+    }
+  }
+
   &.btn-primary {
-    @include m.btn-filled($color-primary, $color-on-body);
+    // COLOR - BACKGROUND
+    @include m.btn-filled($color-on-body, $color-primary);
   }
 
   &.btn-secondary {
-    @include m.btn-filled($color-secondary, $color-primary);
+    @include m.btn-filled($color-primary, $color-primary-dark);
   }
 
   &.btn-accent {
-    @include m.btn-filled($color-dark, $color-white);
+    @include m.btn-filled($color-on-primary-inverse, $color-on-primary);
   }
 
   &.btn-link {
     @include m.btn-filled($color-primary, $color-transparent);
     text-decoration: underline;
+  }
+}
+
+.btn-fab {
+  @include m.btn-fab-body;
+
+  &.btn-secondary {
+    @include m.btn-filled($color-primary, $color-primary-dark);
   }
 }

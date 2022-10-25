@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import GsapAnimations from "@/views/GsapAnimations";
 import TypographyView from "@/views/TypographyView";
+import ButtonsView from "@/views/ButtonsView";
 
 const routes = [
     {
@@ -18,6 +19,11 @@ const routes = [
         path: "/typography",
         name: "typography",
         component: TypographyView,
+    },
+    {
+        path: "/buttons",
+        name: "buttons",
+        component: ButtonsView,
     }
 ];
 

@@ -1,50 +1,50 @@
 <template>
   <div>
-    <div :class="['sidebar', isSidebarActive  ? '' : 'sidebar-hidden']">
+    <div :class="['sidebar', isSidebarActive ? '' : 'sidebar-hidden']">
       <div class="sidebar-content">
         <div class="sidebar-header">
-          <p>Components menu</p>
-          <button class="btn btn-sm btn-link"
-                  @click="sidebarToggle()">
+          <p>Design System</p>
+          <button class="btn btn-sm btn-link" @click="sidebarToggle()">
             <i class="material-icons-outlined">close</i>
           </button>
         </div>
         <div class="sidebar-body">
           <ul>
             <li class="sidebar-item">
-              <router-link to="/">
-                <i class="material-icons-outlined">code</i>
-                Sidebar
-              </router-link>
-            </li>
-            <li class="sidebar-item disabled">
-              <router-link to="/" :disabled="isDisabled">
-                <i class="material-icons-outlined">code</i>
+              <router-link to="/buttons" class="sidebar-link">
+                <i class="material-icons-outlined">&#xf1c1;</i>
                 Buttons
               </router-link>
             </li>
-            <li class="sidebar-item disabled">
-              <router-link to="/" :disabled="isDisabled">
-                <i class="material-icons-outlined">code</i>
+            <li class="sidebar-item">
+              <router-link to="/cards" class="sidebar-link disabled" :disabled="isDisabled">
+                <i class="material-icons-outlined">&#xe8e9;</i>
                 Cards
               </router-link>
             </li>
             <li class="sidebar-item">
-              <router-link to="/gsap">
-                <i class="material-icons-outlined">code</i>
-                GSAP
+              <router-link to="/navbars" class="sidebar-link disabled" :disabled="isDisabled">
+                <i class="material-icons-outlined">&#xe5d2;</i>
+                Navbars
               </router-link>
             </li>
             <li class="sidebar-item">
-              <router-link to="/typography">
-                <i class="material-icons-outlined">code</i>
+              <router-link to="/" class="sidebar-link">
+                <i class="material-icons-outlined">&#xf114;</i>
+                Sidebar
+              </router-link>
+            </li>
+            <li class="sidebar-item">
+              <router-link to="/typography" class="sidebar-link">
+                <i class="material-icons-outlined">&#xe245;</i>
                 Typography
               </router-link>
             </li>
-            <li class="sidebar-item disabled">
-              <router-link to="/" :disabled="isDisabled">
-                <i class="material-icons-outlined">code</i>
-                Navbar
+
+            <li class="sidebar-item">
+              <router-link to="/gsap" class="sidebar-link">
+                <i class="material-icons-outlined">&#xe71c;</i>
+                GSAP
               </router-link>
             </li>
           </ul>
@@ -65,22 +65,22 @@ export default {
   props: {
     isSidebarActive: {
       type: Boolean,
-      default: null
+      default: null,
     },
     sidebarToggle: {
       type: Function,
-      default: null
-    }
+      default: null,
+    },
   },
   data() {
     return {
-      isDisabled: true
-    }
+      isDisabled: true,
+    };
   },
   methods: {
     updateValue(event) {
-      this.$emit('update:modelValue', event.target.value)
-    }
-  }
-}
+      this.$emit("update:modelValue", event.target.value);
+    },
+  },
+};
 </script>

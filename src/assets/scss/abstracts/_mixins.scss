@@ -6,10 +6,28 @@
   padding: 0.75rem 1.5rem;
   margin: 0.5rem;
   font-weight: 700;
-  font-size: calc(1rem + 0.2vw);
+  font-size: 14px;
+  letter-spacing: .5px;
   border-style: none;
-  border-radius: 12px;
+  border-radius: v.$border-radius-12;
   background-color: v.$color-white;
+  font-family: v.$font-dm-sans;
+  transition: v.$transition-cubic-bezier;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@mixin btn-fab-body() {
+  position: fixed;
+  bottom: v.$space-2;
+  right: v.$space-2;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-style: none;
+  border-radius: v.$border-radius-12;
   font-family: v.$font-dm-sans;
   transition: v.$transition-cubic-bezier;
 }
@@ -24,6 +42,7 @@
 
   &:active {
     background: scale-color($bg, $alpha: -50%);
+    transform: scale(0.95);
   }
 }
 
