@@ -38,6 +38,10 @@
   &.btn-link {
     @include m.btn-filled($color-primary, $color-transparent);
     text-decoration: underline;
+
+    :is(&.btn-icon) {
+      text-decoration: none;
+    }
   }
 }
 

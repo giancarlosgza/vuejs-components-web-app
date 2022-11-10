@@ -150,6 +150,32 @@ a {
   }
 }
 
+// FONT SIZES
+.mdc-18 {
+  font-size: 18px;
+}
+
+.mdc-28 {
+  font-size: 28px;
+}
+
 .mdc-38 {
   font-size: 38px;
+}
+
+.mdc-48 {
+  font-size: 48px;
+}
+
+// FONT WEIGHT
+.fw-400 {
+  font-weight: $fw-400;
+}
+
+.fw-500 {
+  font-weight: $fw-500;
+}
+
+.fw-700 {
+  font-weight: $fw-700;
 }

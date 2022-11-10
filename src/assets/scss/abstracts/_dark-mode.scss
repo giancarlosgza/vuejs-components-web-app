@@ -59,6 +59,21 @@
     color: $color-muted;
   }
 
+  // BADGES
+  .badge {
+    &.badge-filled {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: $color-primary-dark;
+    }
+
+    &.badge-outline {
+      background-color: transparent;
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+
   // COMPONENTS
   .btn {
     &.btn-primary {
@@ -81,10 +96,12 @@
     }
   }
 
+  // CARDS
   .card {
     background-color: $color-surface-1;
   }
 
+  // SIDEBAR
   .sidebar {
     background-color: scale-color($color-surface-1, $lightness: 15%);
     color: $color-white;

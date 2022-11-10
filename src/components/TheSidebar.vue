@@ -17,7 +17,7 @@
               </router-link>
             </li>
             <li class="sidebar-item">
-              <router-link to="/cards" class="sidebar-link disabled" :disabled="isDisabled">
+              <router-link to="/cards" class="sidebar-link">
                 <i class="material-icons-outlined">&#xe8e9;</i>
                 Cards
               </router-link>

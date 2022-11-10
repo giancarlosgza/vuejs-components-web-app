@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import GsapAnimations from "@/views/GsapAnimations";
 import TypographyView from "@/views/TypographyView";
 import ButtonsView from "@/views/ButtonsView";
+import CardsView from "@/views/CardsView";
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: "/buttons",
         name: "buttons",
         component: ButtonsView,
+    },
+    {
+        path: "/cards",
+        name: "cards",
+        component: CardsView,
     }
 ];
 
