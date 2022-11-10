@@ -2,7 +2,8 @@ $bg-body: #ffffff;
 $color-on-body: #000000;
 $color-muted: #52595f;
 
-$color-primary: #15DC9B;
+//$color-primary: #15DC9B;
+$color-primary: #FF8080;
 $color-primary-dark: scale-color($color-primary, $lightness: -80%);
 $color-secondary: #25272b;
 $color-accent: #0063cd;
@@ -18,6 +19,15 @@ $color-white: #ffffff;
 // CARDS
 $color-surface-1: #ffffff;
 $color-surface-outline: #dadce0;
+
+$enabled-dynamic-theme: true;
+
+// DYNAMIC BACKGROUND COLORS
+@if ($enabled-dynamic-theme == true) {
+  $bg-body: mix($bg-body, $color-primary, 95%);
+  $color-surface-1: mix($color-surface-1, $color-primary, 85%);
+  $color-surface-outline: mix($color-surface-outline, $color-primary, 70%);
+}
 
 $theme-colors: (
         'color-white': #ffffff,

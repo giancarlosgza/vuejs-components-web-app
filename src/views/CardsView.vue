@@ -31,9 +31,9 @@
               <p class="subtitle-1 text-muted mb-2">Primary buttons are essentially filled tonal buttons with a
                 shadow.</p>
               <div>
-                <div class="badge badge-filled">Topic</div>
-                <div class="badge badge-outline">Topic</div>
-                <div class="badge badge-outline">Topic</div>
+                <div class="badge badge-filled">Filled topic</div>
+                <div class="badge badge-outline">Outline topic</div>
+                <div class="badge badge-outline">Outline topic</div>
               </div>
             </div>
             <div class="card-footer">
@@ -61,9 +61,9 @@
               <p class="subtitle-1 text-muted mb-2">Primary buttons are essentially filled tonal buttons with a
                 shadow.</p>
               <div>
-                <div class="badge badge-outline">Topic</div>
-                <div class="badge badge-outline">Topic</div>
-                <div class="badge badge-outline">Topic</div>
+                <div class="badge badge-filled">Filled topic</div>
+                <div class="badge badge-filled">Filled topic</div>
+                <div class="badge badge-filled">Filled topic</div>
               </div>
             </div>
             <div class="card-footer">
@@ -88,9 +88,8 @@
               <p class="subtitle-1 text-muted mb-2">Primary buttons are essentially filled tonal buttons with a
                 shadow.</p>
               <div>
-                <div class="badge badge-outline">Topic</div>
-                <div class="badge badge-outline">Topic</div>
-                <div class="badge badge-outline">Topic</div>
+                <div class="badge badge-outline">Outline topic</div>
+                <div class="badge badge-outline">Outline topic</div>
               </div>
             </div>
             <div class="card-footer">
@@ -115,9 +114,9 @@
               <p class="subtitle-1 text-muted mb-2">Primary buttons are essentially filled tonal buttons with a
                 shadow.</p>
               <div>
-                <div class="badge badge-outline">Topic</div>
-                <div class="badge badge-outline">Topic</div>
-                <div class="badge badge-outline">Topic</div>
+                <div class="badge badge-outline">Outline topic</div>
+                <div class="badge badge-outline">Outline topic</div>
+                <div class="badge badge-outline">Outline topic</div>
               </div>
             </div>
             <div class="card-footer">

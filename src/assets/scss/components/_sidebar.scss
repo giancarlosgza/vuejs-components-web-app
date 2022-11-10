@@ -80,8 +80,8 @@
           }
 
           &.router-link-active, &.router-link-exact-active {
-            background-color: scale-color($color-primary, $alpha: -80%);
-            color: $color-primary !important;
+            background-color: scale-color($color-primary, $alpha: -90%);
+            color: $color-primary-dark;
             font-weight: 700;
           }
         }

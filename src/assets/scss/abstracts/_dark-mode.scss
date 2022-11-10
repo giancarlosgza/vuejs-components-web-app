@@ -113,6 +113,13 @@
           a {
             color: $color-muted;
           }
+
+          .sidebar-link {
+            &.router-link-active, &.router-link-exact-active {
+              background-color: scale-color($color-primary, $alpha: -90%);
+              color: $color-primary;
+            }
+          }
         }
       }
     }

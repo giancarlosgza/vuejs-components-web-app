@@ -2,7 +2,7 @@
 @use "../abstracts/variables" as *;
 
 .card {
-  box-shadow: $shadow-sm;
+  //box-shadow: $shadow-sm;
   border-radius: $border-radius-25;
   display: flex;
   flex-direction: column;
