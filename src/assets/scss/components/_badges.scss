@@ -14,14 +14,14 @@
   vertical-align: baseline;
 
   &.badge-filled {
-    background-color: $color-primary;
-    border-color: $color-primary;
+    background-color: scale-color($color-primary, $lightness: 80%);
+    border-color: scale-color($color-primary, $lightness: 80%);
     color: $color-primary-dark;
   }
 
   &.badge-outline {
     background-color: transparent;
-    border-color: $color-primary;
-    color: $color-primary;
+    border-color: $color-surface-outline;
+    color: $color-on-primary;
   }
 }

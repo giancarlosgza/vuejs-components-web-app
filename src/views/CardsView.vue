@@ -31,13 +31,16 @@
               <p class="subtitle-1 text-muted mb-2">Primary buttons are essentially filled tonal buttons with a
                 shadow.</p>
               <div>
-                <div class="badge badge-outline">Topic</div>
+                <div class="badge badge-filled">Topic</div>
                 <div class="badge badge-outline">Topic</div>
                 <div class="badge badge-outline">Topic</div>
               </div>
             </div>
             <div class="card-footer">
-              <button class="btn btn-primary">Read more</button>
+              <div>
+                <button class="btn btn-primary">Read more</button>
+                <button class="btn btn-secondary">Read more</button>
+              </div>
               <button class="btn btn-link btn-icon">
                 <i class="material-symbols-rounded mb-0">&#xe5d4;</i>
               </button>
