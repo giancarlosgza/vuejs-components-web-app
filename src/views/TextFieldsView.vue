@@ -51,6 +51,22 @@
                 </div>
                 <div class="col-4">
                   <div class="form-control">
+                    <label for="input-filled">Username</label>
+                    <span class="material-symbols-rounded">&#xe853;</span>
+                    <input
+                        id="input-filled"
+                        type="text"
+                        class="text-field filled-field"
+                        name="Username"
+                        placeholder="Username"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-4">
+                  <div class="form-control">
                     <label for="input-outline">Last name</label>
                     <input
                         id="input-outline"
@@ -61,7 +77,21 @@
                     />
                   </div>
                 </div>
+                <div class="col-4">
+                  <div class="form-control">
+                    <label for="input-outline">Phone</label>
+                    <span class="material-symbols-rounded">&#xe0b0;</span>
+                    <input
+                        id="input-outline"
+                        type="text"
+                        class="text-field outline-field"
+                        name="Phone"
+                        placeholder="Phone"
+                    />
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
