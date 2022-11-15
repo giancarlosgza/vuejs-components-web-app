@@ -27,8 +27,13 @@
     @include m.btn-filled($color-on-body, $color-primary);
   }
 
-  &.btn-secondary {
+  &.btn-primary-filled {
     @include m.btn-filled($color-primary, $color-primary-dark);
+  }
+
+  &.btn-secondary {
+    // COLOR - BACKGROUND
+    @include m.btn-filled($color-secondary-dark, $color-secondary);
   }
 
   &.btn-accent {
@@ -48,7 +53,7 @@
 .btn-fab {
   @include m.btn-fab-body;
 
-  &.btn-secondary {
+  &.btn-primary-filled {
     @include m.btn-filled($color-primary, $color-primary-dark);
   }
 }

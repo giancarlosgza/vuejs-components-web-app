@@ -3,9 +3,10 @@ $color-on-body: #000000;
 $color-muted: #52595f;
 
 //$color-primary: #15DC9B;
-$color-primary: #FF8080;
+$color-primary: #f05146;
 $color-primary-dark: scale-color($color-primary, $lightness: -80%);
-$color-secondary: #25272b;
+$color-secondary: #46e5f0;
+$color-secondary-dark: scale-color($color-secondary, $lightness: -80%);
 $color-accent: #0063cd;
 $color-accent-dark: #001787;
 $color-transparent: transparent;
@@ -61,6 +62,7 @@ $fw-400: 400;
 $fw-500: 500;
 $fw-700: 700;
 
+$border-radius-0: 0;
 $border-radius-4: 4px;
 $border-radius-6: 6px;
 $border-radius-8: ($border-radius-4 * 2);

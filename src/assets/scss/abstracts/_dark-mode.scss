@@ -2,19 +2,27 @@
 @use "../abstracts/mixins" as m;
 
 @media (prefers-color-scheme: dark) {
-  // VARIABLES
+  //****** VARIABLES *****//
   $bg-body: #121212;
   $color-on-body: #ffffff;
   $color-muted: scale-color($color-muted, $lightness: 60%);
   $color-primary: scale-color($color-primary, $lightness: 60%);
   $color-primary-dark: scale-color($color-primary, $lightness: -80%);
   $color-secondary: scale-color($color-secondary, $lightness: 60%);
+  $color-secondary-dark: scale-color($color-secondary, $lightness: -80%);
   $color-on-primary: #ffffff;
   $color-on-primary-inverse: #000000;
   $color-surface-1: #1e1e1e;
   $color-surface-outline: #323232;
 
-  // BASE
+  // DYNAMIC BACKGROUND COLORS
+  @if ($enabled-dynamic-theme == true) {
+    $bg-body: mix($bg-body, $color-primary, 95%);
+    $color-surface-1: mix($color-surface-1, $color-primary, 85%);
+    $color-surface-outline: mix($color-surface-outline, $color-primary, 70%);
+  }
+
+  //****** BASE *****//
   body {
     background-color: $bg-body;
     color: $color-on-body;
@@ -33,7 +41,6 @@
     background-color: $color-surface-outline;
     border-radius: 20px;
   }
-
 
   // TYPOGRAPHY
   a {
@@ -59,6 +66,37 @@
     color: $color-muted;
   }
 
+  //****** COMPONENTS *****//
+  // BUTTONS
+  .btn {
+    &.btn-primary {
+      // COLOR - BACKGROUND
+      @include m.btn-filled($color-primary-dark, $color-primary);
+    }
+
+    &.btn-primary-filled {
+      @include m.btn-filled($color-primary, $color-primary-dark);
+    }
+
+    &.btn-secondary {
+      @include m.btn-filled($color-secondary-dark, $color-secondary);
+    }
+
+    &.btn-accent {
+      @include m.btn-filled($color-on-primary-inverse, $color-on-primary);
+    }
+
+    &.btn-link {
+      @include m.btn-filled($color-primary, $color-transparent);
+    }
+  }
+
+  .btn-fab {
+    &.btn-primary-filled {
+      @include m.btn-filled($color-primary, $color-primary-dark);
+    }
+  }
+
   // BADGES
   .badge {
     &.badge-filled {
@@ -71,28 +109,6 @@
       background-color: transparent;
       border-color: $color-surface-outline;
       color: $color-on-primary;
-    }
-  }
-
-  // COMPONENTS
-  .btn {
-    &.btn-primary {
-      // COLOR - BACKGROUND
-      @include m.btn-filled($color-dark, $color-primary);
-    }
-
-    &.btn-secondary {
-      @include m.btn-filled($color-primary, $color-primary-dark);
-    }
-
-    &.btn-accent {
-      @include m.btn-filled($color-on-primary-inverse, $color-on-primary);
-    }
-  }
-
-  .btn-fab {
-    &.btn-secondary {
-      @include m.btn-filled($color-primary, $color-primary-dark);
     }
   }
 
@@ -120,6 +136,96 @@
               color: $color-primary;
             }
           }
+        }
+      }
+    }
+  }
+
+  // FORMS
+  .form-control {
+    label {
+      color: $color-on-body;
+    }
+
+    input {
+      border: 1px solid $color-surface-outline;
+      background-color: $bg-body;
+      color: $color-on-body;
+    }
+
+    // FILLED FIELD
+    &:has(.filled-field) {
+      &:has(.filled-field:focus,:active) {
+        label {
+          color: $color-primary;
+        }
+      }
+
+      &:has(.filled-field:not(:placeholder-shown)) {
+        label {
+          color: $color-primary;
+        }
+      }
+
+      .filled-field {
+        background-color: transparent;
+        border: transparent;
+        border-bottom: 1px solid $color-primary;
+
+        &:hover {
+          background-color: transparent;
+          border-bottom: 2px solid $color-primary;
+        }
+
+        &:focus, &:active {
+          background-color: scale-color($bg-body, $lightness: -10%);
+        }
+
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+    }
+
+    // OUTLINE FIELD
+    &:has(.outline-field) {
+      &:has(.outline-field:focus,:active) {
+        label {
+          background-color: transparent;
+          color: $color-primary;
+        }
+
+        input {
+          border: 2px solid $color-primary;
+        }
+      }
+
+      &:has(.outline-field:not(:placeholder-shown)) {
+        label {
+          background-color: transparent;
+          color: $color-primary;
+        }
+
+        input {
+          border: 2px solid $color-primary;
+        }
+      }
+
+      .outline-field {
+        background-color: transparent;
+        border: 1px solid $color-primary;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &:focus, &:active {
+          //background-color: scale-color($bg-body, $lightness: -10%);
+          outline: 0;
+        }
+
+        &::placeholder {
+          opacity: 0;
         }
       }
     }

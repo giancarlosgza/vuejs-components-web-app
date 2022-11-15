@@ -9,7 +9,7 @@
               <p class="subtitle-1">Cards contain content and actions that relate information about a subject.</p>
             </div>
           </div>
-          <button class="btn-fab btn-secondary"
+          <button class="btn-fab btn-primary-filled"
                   @click="toggleSidebar()">
             <i class="material-icons-outlined me-1">
               {{ isSidebarActive ? 'close' : 'menu_open' }}
@@ -39,7 +39,7 @@
             <div class="card-footer">
               <div>
                 <button class="btn btn-primary">Read more</button>
-                <button class="btn btn-secondary">Read more</button>
+                <button class="btn btn-primary-filled">Read more</button>
               </div>
               <button class="btn btn-link btn-icon">
                 <i class="material-symbols-rounded mb-0">&#xe5d4;</i>

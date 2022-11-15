@@ -35,6 +35,12 @@
               </router-link>
             </li>
             <li class="sidebar-item">
+              <router-link to="/text-fields" class="sidebar-link">
+                <i class="material-icons-outlined">&#xe745;</i>
+                Text Fields
+              </router-link>
+            </li>
+            <li class="sidebar-item">
               <router-link to="/typography" class="sidebar-link">
                 <i class="material-icons-outlined">&#xe245;</i>
                 Typography

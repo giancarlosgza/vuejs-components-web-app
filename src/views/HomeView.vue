@@ -11,7 +11,7 @@
                 <p>Sidebar contains navigation content from the website or app</p>
               </div>
             </div>
-            <button class="btn-fab btn-secondary"
+            <button class="btn-fab btn-primary-filled"
                     @click="toggleSidebar()">
               <i class="material-icons-outlined me-1">
                 {{ isSidebarActive ? 'close' : 'menu_open' }}

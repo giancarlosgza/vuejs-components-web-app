@@ -4,22 +4,13 @@ import GsapAnimations from "@/views/GsapAnimations";
 import TypographyView from "@/views/TypographyView";
 import ButtonsView from "@/views/ButtonsView";
 import CardsView from "@/views/CardsView";
+import TextFieldsView from "@/views/TextFieldsView";
 
 const routes = [
     {
         path: "/",
         name: "home",
         component: HomeView,
-    },
-    {
-        path: "/gsap",
-        name: "gsap",
-        component: GsapAnimations,
-    },
-    {
-        path: "/typography",
-        name: "typography",
-        component: TypographyView,
     },
     {
         path: "/buttons",
@@ -30,7 +21,22 @@ const routes = [
         path: "/cards",
         name: "cards",
         component: CardsView,
-    }
+    },
+    {
+        path: "/gsap",
+        name: "gsap",
+        component: GsapAnimations,
+    },
+    {
+        path: "/text-fields",
+        name: "text-fields",
+        component: TextFieldsView,
+    },
+    {
+        path: "/typography",
+        name: "typography",
+        component: TypographyView,
+    },
 ];
 
 const router = createRouter({

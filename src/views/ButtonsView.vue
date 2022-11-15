@@ -11,7 +11,7 @@
                 post.</p>
             </div>
           </div>
-          <button class="btn-fab btn-secondary"
+          <button class="btn-fab btn-primary-filled"
                   @click="toggleSidebar()">
             <i class="material-icons-outlined me-1">
               {{ isSidebarActive ? 'close' : 'menu_open' }}
@@ -34,6 +34,18 @@
               <button class="btn btn-primary mx-0">Explore</button>
               <button class="btn btn-primary">Sign up</button>
               <button class="btn btn-primary btn-icon">
+                <i class="material-symbols-rounded mb-0">&#xe145;</i>
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="title">Primary filled buttons</h3>
+              <p class="subtitle-1 text-muted mb-2">Primary filled buttons are essentially filled tonal buttons with a
+                shadow.</p>
+              <button class="btn btn-primary-filled mx-0">Explore</button>
+              <button class="btn btn-primary-filled">Sign up</button>
+              <button class="btn btn-primary-filled btn-icon">
                 <i class="material-symbols-rounded mb-0">&#xe145;</i>
               </button>
             </div>
