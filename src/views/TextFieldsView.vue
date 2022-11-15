@@ -27,6 +27,47 @@
         <div class="col-12">
           <h2 class="mb-3">Types</h2>
         </div>
+        <!-- NORMAL -->
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="title">Normal</h3>
+              <p class="subtitle-1 text-muted mb-2">
+                Primary buttons are essentially filled tonal buttons with a
+                shadow.
+              </p>
+
+              <div class="row mt-3">
+                <div class="col-4">
+                  <div class="form-control">
+                    <label for="input-normal">Album title</label>
+                    <input
+                        id="input-normal"
+                        type="text"
+                        class="text-field"
+                        name="Title"
+                        placeholder="Ex. Birthday party"
+                    />
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-control">
+                    <label for="input-normal-2">Description</label>
+                    <input
+                        id="input-normal-2"
+                        type="text"
+                        class="text-field"
+                        name="Description"
+                        placeholder="Ex. Lorem Ipsum Dolor"
+                    />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- FILLED -->
         <div class="col-12">
           <div class="card">
             <div class="card-body">
@@ -35,7 +76,6 @@
                 Primary buttons are essentially filled tonal buttons with a
                 shadow.
               </p>
-
               <div class="row mt-3">
                 <div class="col-4">
                   <div class="form-control">
@@ -51,10 +91,10 @@
                 </div>
                 <div class="col-4">
                   <div class="form-control">
-                    <label for="input-filled">Username</label>
+                    <label for="input-filled-2">Username</label>
                     <span class="material-symbols-rounded">&#xe853;</span>
                     <input
-                        id="input-filled"
+                        id="input-filled-2"
                         type="text"
                         class="text-field filled-field"
                         name="Username"
@@ -63,7 +103,18 @@
                   </div>
                 </div>
               </div>
-
+            </div>
+          </div>
+        </div>
+        <!-- OUTLINE -->
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="title">Outline</h3>
+              <p class="subtitle-1 text-muted mb-2">
+                Primary buttons are essentially filled tonal buttons with a
+                shadow.
+              </p>
               <div class="row mt-3">
                 <div class="col-4">
                   <div class="form-control">
@@ -79,10 +130,10 @@
                 </div>
                 <div class="col-4">
                   <div class="form-control">
-                    <label for="input-outline">Phone</label>
+                    <label for="input-outline-2">Phone</label>
                     <span class="material-symbols-rounded">&#xe0b0;</span>
                     <input
-                        id="input-outline"
+                        id="input-outline-2"
                         type="text"
                         class="text-field outline-field"
                         name="Phone"
@@ -91,7 +142,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

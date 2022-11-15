@@ -30,6 +30,7 @@
   border-radius: v.$border-radius-12;
   font-family: v.$font-dm-sans;
   transition: v.$transition-cubic-bezier;
+  cursor: pointer;
 }
 
 @mixin btn-filled($color, $bg) {
